@@ -1,0 +1,67 @@
+:root { --glass: rgba(255, 255, 255, 0.15); }
+
+        body {
+            margin: 0;
+            font-family: 'Inter', sans-serif;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: url('background2.jpg') no-repeat center center fixed;
+            background-size: cover;
+            /* Constant movement animation */
+            animation: panBackground 20s infinite alternate ease-in-out;
+            transition: background-color 0.8s ease;
+        }
+
+        @keyframes panBackground {
+            from { background-position: 50% 50%; }
+            to { background-position: 55% 55%; }
+        }
+
+        .animate-zoom { animation: pulseBackground 0.5s ease-out; }
+
+        @keyframes pulseBackground {
+            0% { background-size: 100%; }
+            50% { background-size: 105%; }
+            100% { background-size: 100%; }
+        }
+
+        .card {
+            background: var(--glass);
+            backdrop-filter: blur(25px);
+            border: 4px solid rgba(255, 255, 255, 0.6);
+            padding: 80px; 
+            width: 500px;
+            border-radius: 40px;
+            box-shadow: 0 30px 60px rgba(0,0,0,0.3);
+            text-align: center;
+            transition: all 0.6s ease;
+            color: #ffffff;
+        }
+
+        h1 { font-weight: 700; margin-bottom: 30px; }
+
+        button {
+            background: #ffffff;
+            color: #1a1a1a;
+            border: none;
+            padding: 20px 50px;
+            font-size: 18px;
+            font-weight: 700;
+            border-radius: 50px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+        }
+
+        button:hover { transform: translateY(-5px); box-shadow: 0 15px 30px rgba(0,0,0,0.3); }
+
+        table {
+            margin-top: 40px;
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        td { padding: 15px; border-top: 1px solid rgba(255,255,255,0.2); font-weight: 300; }
+        .label { font-weight: 700; }
